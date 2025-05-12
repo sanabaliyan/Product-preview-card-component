@@ -1,0 +1,127 @@
+:root {
+  /* Colors  */
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+
+  --clr-black: hsl(212, 21%, 14%);
+  --clr-Grey: hsl(228, 12%, 48%);
+  --clr-Cream: hsl(30, 38%, 92%);
+  --clr-White: hsl(0, 0%, 100%);
+
+  /* font size basic  */
+  --font-base: 16px;
+
+  /* font weight  */
+  --font-weight-base: 500;
+  --font-weight-bold: 700;
+
+  --font-family-heading: "Fraunces", serif;
+  --font-family-base: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  font-size: var(--font-base);
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-base);
+  background-color: var(--clr-Cream);
+  color: var(--clr-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  width: 700px;
+  display: flex;
+  background-color: var(--clr-White);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.card-details-container {
+  flex: 1;
+  padding: 24px;
+}
+
+.card-details-container span {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--clr-Grey);
+}
+
+.card-details-container h1 {
+  margin: 15px 0;
+  font-size: 45px;
+  font-family: var(--font-family-heading);
+}
+
+.card-details-container p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: var(--clr-Grey);
+  padding-right: 5px;
+}
+
+.card-details-container .price-container {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.card-details-container .price-container strong {
+  font-size: 35px;
+  font-family: var(--font-family-heading);
+  color: var(--green-500);
+  margin-right: 10px;
+}
+
+.card-details-container .price-container del {
+  color: var(--clr-Grey);
+}
+
+.card-details-container .card-btn {
+  width: 100%;
+  background-color: var(--green-500);
+  color: var(--clr-White);
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-details-container .card-btn:hover {
+  background-color: var(--green-700);
+}
+
+@media (max-width: 475px) {
+  main {
+    padding: 16px;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
